@@ -1,0 +1,82 @@
+#import types/*.graphql
+#import inputs/*.graphql
+#import unions/*.graphql
+#import subscriptions/*.graphql
+#import queries/*.graphql
+#import mutations/*.graphql
+#import ../vendor/wishknish/knishio-server-php/graphql/schema.graphql
+
+directive @scalar(
+    """
+    Reference to a class that extends `\GraphQL\Type\Definition\ScalarType`.
+    """
+    class: String!
+) on SCALAR
+
+directive @field(
+    """
+    A reference to the resolver function to be used.
+    Consists of two parts: a class name and a method name, seperated by an `@` symbol.
+    If you pass only a class name, the method name defaults to `__invoke`.
+    """
+    resolver: String!
+
+    """
+    Supply additional data to the resolver.
+    """
+    args: [String!]
+) on FIELD_DEFINITION
+
+directive @belongsTo(
+    """
+    Specify the relationship method name in the model class,
+    if it is named different from the field in the schema.
+    """
+    relation: String
+
+    """
+    Apply scopes to the underlying query.
+    """
+    scopes: [String!]
+) on FIELD_DEFINITION
+
+directive @belongsToMany(
+    """
+    Which pagination style to use.
+    Allowed values: paginator, connection.
+    """
+    type: String = "paginator"
+
+    """
+    Specify the default quantity of elements to be returned.
+    """
+    defaultCount: Int
+
+    """
+    Specify the maximum quantity of elements to be returned.
+    """
+    maxCount: Int
+
+    """
+    Specify the relationship method name in the model class,
+    if it is named different from the field in the schema.
+    """
+    relation: String
+
+    """
+    Apply scopes to the underlying query.
+    """
+    scopes: [String!]
+
+    """
+    Specify a custom type that implements the Edge interface
+    to extend edge object.
+    """
+    edgeType: String
+) on FIELD_DEFINITION
+
+"A datetime string with format `Y-m-d H:i:s`, e.g. `2018-01-01 13:00:00`."
+scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
+
+"A date string with format `Y-m-d`, e.g. `2011-05-23`."
+scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")

@@ -11,7 +11,7 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
-        "wishknish/knishio-server-php": "dev-eugene-teplitsky-dev"
+        "wishknish/knishio-server-php": "dev-vladimir-makarov-laravel-migration"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
@@ -30,8 +30,13 @@
         }
     },
     "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ],
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "WishKnish\\KnishIO\\Tests\\": "vendor/wishknish/knishio-server-php/tests/",
+            "WishKnish\\KnishIO\\Client\\Tests\\": "vendor/wishknish/knishio-client-php/tests/"
         }
     },
     "scripts": {
@@ -64,7 +69,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/wishknish/knishio-server-php"
+            "url": "git@github.com:wishknish/knishio-server-php.git"
         },
         {
             "type": "github",
