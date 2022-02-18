@@ -11,7 +11,7 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
-        "wishknish/knishio-server-php": "dev-staging"
+        "wishknish/knishio-server-php": "dev-vladimir-makarov-laravel-migration"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
