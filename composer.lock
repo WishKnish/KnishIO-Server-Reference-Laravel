@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ead8ea87e27486636a457b3b85ef3061",
+    "content-hash": "a87f144ab4751f539d3a675ce0bd52b6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6756,12 +6756,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:WishKnish/KnishIO-Server-PHP.git",
-                "reference": "450b145aa340449594f54fe7384b645476a6acc5"
+                "reference": "c96f5d16b3e3ede44ed6467324dc8bf4cc59f450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WishKnish/KnishIO-Server-PHP/zipball/450b145aa340449594f54fe7384b645476a6acc5",
-                "reference": "450b145aa340449594f54fe7384b645476a6acc5",
+                "url": "https://api.github.com/repos/WishKnish/KnishIO-Server-PHP/zipball/c96f5d16b3e3ede44ed6467324dc8bf4cc59f450",
+                "reference": "c96f5d16b3e3ede44ed6467324dc8bf4cc59f450",
                 "shasum": ""
             },
             "require": {
@@ -6837,7 +6837,7 @@
                 "issues": "https://github.com/WishKnish/KnishIO-Server-PHP/issues",
                 "source": "https://github.com/WishKnish/KnishIO-Server-PHP"
             },
-            "time": "2022-03-14T20:55:13+00:00"
+            "time": "2022-03-14T21:12:36+00:00"
         }
     ],
     "packages-dev": [
