@@ -1,6 +1,6 @@
 {
-    "name": "wishknish/knishio-server-reference-lumen",
-    "description": "Reference implementation of KnishIO-Server-PHP on the Lumen PHP microframework.",
+    "name": "wishknish/knishio-server-reference-laravel",
+    "description": "Reference implementation of KnishIO-Server-PHP on the Laravel 9+ PHP framework.",
     "keywords": [
         "knishio",
         "wishkinsh",
