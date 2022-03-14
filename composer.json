@@ -1,9 +1,15 @@
 {
-    "name": "laravel/laravel",
+    "name": "wishknish/knishio-server-reference-lumen",
+    "description": "Reference implementation of KnishIO-Server-PHP on the Lumen PHP microframework.",
+    "keywords": [
+        "knishio",
+        "wishkinsh",
+        "blockchain",
+        "api",
+        "graphql",
+        "dag"
+    ],
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
     "require": {
         "php": "^8.0",
         "fruitcake/laravel-cors": "^2.0.5",
@@ -11,7 +17,7 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
-        "wishknish/knishio-server-php": "dev-vladimir-makarov-laravel-migration"
+        "wishknish/knishio-server-php": "master"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
