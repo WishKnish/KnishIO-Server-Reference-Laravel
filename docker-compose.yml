@@ -1,0 +1,62 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: knishio
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: knishio
+    container_name: knishio-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - knishio
+
+  db:
+    image: mariadb:10.5.9
+    container_name: knishio-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mariadb
+    volumes:
+      - ./docker-compose/mariadb:/docker-entrypoint-initdb.d
+    networks:
+      - knishio
+
+  nginx:
+    image: nginx:alpine
+    container_name: knishio-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - knishio
+
+  redis:
+    image: redis:4.0.5-alpine
+    container_name: redis
+    command: [ "redis-server", "--appendonly", "yes" ]
+    hostname: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - ./docker-compose/redis:/data
+    #  - ./docker-compose/redis/redis.conf:/usr/local/etc/redis/redis.conf
+    networks:
+      - knishio
+
+networks:
+  knishio:
+    driver: bridge
