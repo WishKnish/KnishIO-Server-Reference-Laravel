@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\CorsMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::options( '/knishio.oauth', [
+    'middleware' => [ CorsMiddleware::class ],
+    function () {
+        return response( [ 'status' => 'success' ] );
+    }
+] );
+
+Route::post( '/knishio.oauth', [
+    'middleware' => [ CorsMiddleware::class ],
+    'as' => 'knishio_oauth',
+    'uses' => 'TwitterController@token',
+] );
+
 Route::get('/', function () {
+
+    $peerNode = new \WishKnish\KnishIO\Helpers\PeerNode;
+    $peerNode->clearDB();
+    dd( 'Cleared' );
+
     return view('index');
 });
