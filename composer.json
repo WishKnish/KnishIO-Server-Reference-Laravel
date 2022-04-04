@@ -17,7 +17,7 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
-        "wishknish/knishio-server-php": "master"
+        "wishknish/knishio-server-php": "dev-staging"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
