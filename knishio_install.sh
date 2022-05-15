@@ -1,9 +1,10 @@
 # Configure local environment settings
-KNISHIO_SECRET=$(cat /dev/urandom | tr -dc 'a-f0-9' | fold -w ${1:-2048} | head -n 1)
 KNISHIO_HOST=knishnode.local
-KNISHIO_DB_USERNAME=knishio
-KNISHIO_DB_PASSWORD=knishio
+KNISHIO_DB_USERNAME=knishio_user
+KNISHIO_DB_PASSWORD=$(cat /dev/urandom | tr -dc 'A-Za-z0-9' | fold -w ${1:-32} | head -n 1)
 KNISHIO_DB=knishio
+KNISHIO_SECRET=$(cat /dev/urandom | tr -dc 'a-f0-9' | fold -w ${1:-2048} | head -n 1)
+KNISHIO_SOKETI_SECRET=$(cat /dev/urandom | tr -dc 'A-Za-z0-9' | fold -w ${1:-32} | head -n 1)
 
 cat << EOF
                        (
@@ -71,14 +72,14 @@ then
     exit 1
 fi
 
-# Install PHP and Nginx
-sudo apt install -y git curl
+# Install required packages
+sudo apt install -y git curl python3 gcc build-essential
 curl https://packages.sury.org/php/apt.gpg | sudo tee /usr/share/keyrings/suryphp-archive-keyring.gpg >/dev/null
 echo "deb [signed-by=/usr/share/keyrings/suryphp-archive-keyring.gpg] https://packages.sury.org/php/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/sury-php.list
 sudo apt update
 sudo apt upgrade -y
 sudo apt remove apache2
-sudo apt install -y php8.1 php8.1-fpm php8.1-dom php8.1-redis php8.1-curl php8.1-mbstring php8.1-mysql php8.1-bcmath mariadb-server redis nginx
+sudo apt install -y php8.1 php8.1-fpm php8.1-dom php8.1-redis php8.1-curl php8.1-mbstring php8.1-mysql php8.1-bcmath mariadb-server redis nginx supervisor
 
 # Install composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -176,4 +177,51 @@ echo "127.0.0.1 $KNISHIO_HOST" | sudo tee -a /etc/hosts
 cd ..
 sudo rm -rf /var/www/html
 sudo mv KnishIO-Server-Reference-Laravel /var/www/html
-sudo chown -R www-data:www-data /var/www/html
+sudo chown -R www-data:www-data /var/www
+
+# Install NodeJS and Soketi
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs
+sudo -u www-data touch /var/www/.npmrc
+sudo -u www-data npm config set prefix '/var/www/.npm-global'
+sudo -u www-data npm install -g @soketi/soketi
+sudo touch /etc/supervisor/conf.d/soketi.conf
+sudo tee /etc/supervisor/conf.d/soketi.conf <<EOF
+[program:soketi]
+process_name=%(program_name)s_%(process_num)02d
+command=/var/www/.npm-global/bin/soketi start --config=/var/www/html/soketi_config.json
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
+user=www-data
+numprocs=1
+redirect_stderr=true
+stdout_logfile=/var/log/soketi-supervisor.log
+stopwaitsecs=60
+stopsignal=sigint
+minfds=10240
+EOF
+
+sudo -u www-data tee /var/www/html/soketi_config.json <<EOF
+{
+    "debug": true,
+    "port": 6002,
+    "appManager.array.apps": [
+        {
+            "id": "knishio",
+            "key": "knishio",
+            "secret": "$KNISHIO_SOKETI_SECRET",
+            "webhooks": [
+                {
+                    "url": "https://...",
+                    "event_types": ["channel_occupied"]
+                }
+            ]
+        }
+    ]
+}
+EOF
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl reload
