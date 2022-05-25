@@ -6816,12 +6816,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WishKnish/KnishIO-Client-PHP.git",
-                "reference": "80a1d96bd36622bf29afac57b11a103cf580b280"
+                "reference": "b41f7a8f08aabf5b5706c3109f83d284441bec2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WishKnish/KnishIO-Client-PHP/zipball/80a1d96bd36622bf29afac57b11a103cf580b280",
-                "reference": "80a1d96bd36622bf29afac57b11a103cf580b280",
+                "url": "https://api.github.com/repos/WishKnish/KnishIO-Client-PHP/zipball/b41f7a8f08aabf5b5706c3109f83d284441bec2c",
+                "reference": "b41f7a8f08aabf5b5706c3109f83d284441bec2c",
                 "shasum": ""
             },
             "require": {
@@ -6886,7 +6886,7 @@
                 "source": "https://github.com/WishKnish/KnishIO",
                 "wiki": "https://github.com/WishKnish/KnishIO/wiki"
             },
-            "time": "2022-05-20T16:27:17+00:00"
+            "time": "2022-05-25T18:06:29+00:00"
         },
         {
             "name": "wishknish/knishio-server-php",
@@ -6894,12 +6894,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:WishKnish/KnishIO-Server-PHP.git",
-                "reference": "25a4fa42856fcdbc4d00a25ddd0337d28d170c5b"
+                "reference": "621bdd1c4dd6614c9ba3b0a284074405fe3a4501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WishKnish/KnishIO-Server-PHP/zipball/25a4fa42856fcdbc4d00a25ddd0337d28d170c5b",
-                "reference": "25a4fa42856fcdbc4d00a25ddd0337d28d170c5b",
+                "url": "https://api.github.com/repos/WishKnish/KnishIO-Server-PHP/zipball/621bdd1c4dd6614c9ba3b0a284074405fe3a4501",
+                "reference": "621bdd1c4dd6614c9ba3b0a284074405fe3a4501",
                 "shasum": ""
             },
             "require": {
@@ -6975,7 +6975,7 @@
                 "issues": "https://github.com/WishKnish/KnishIO-Server-PHP/issues",
                 "source": "https://github.com/WishKnish/KnishIO-Server-PHP"
             },
-            "time": "2022-05-25T15:05:28+00:00"
+            "time": "2022-05-25T18:06:52+00:00"
         }
     ],
     "packages-dev": [
