@@ -363,7 +363,7 @@ return [
         /*
          * Default subscription broadcaster.
          */
-        'broadcaster' => env('LIGHTHOUSE_BROADCASTER', 'echo'),
+        'broadcaster' => env('LIGHTHOUSE_BROADCASTER', 'pusher'),
 
         /*
          * Subscription broadcasting drivers with config options.
