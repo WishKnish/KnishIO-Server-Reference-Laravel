@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
+use Nuwave\Lighthouse\Subscriptions\SubscriptionServiceProvider;
 
 return [
 
@@ -168,7 +169,7 @@ return [
          * Package Service Providers...
          */
 
-        \Nuwave\Lighthouse\Subscriptions\SubscriptionServiceProvider::class,
+        SubscriptionServiceProvider::class,
 
         /*
          * Application Service Providers...
