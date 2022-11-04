@@ -6,7 +6,7 @@
     <h3><?= $jsonldType->description() ?></h3><br />
 
     <?php if( $jsonldType->fields() ): ?>
-        <?= view( 'schema/_parts/type_list', [ 'jsonldTypes' => $jsonldType->fields() ] ); ?>
+        <?= view( 'schema/_parts/type_list', [ 'jsonldTypes' => $jsonldType->fields() ] ) ?>
     <?php endif; ?>
 </div>
 
