@@ -1465,16 +1465,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.38.0",
+            "version": "v9.39.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "abf198e443e06696af3f356b44de67c0fa516107"
+                "reference": "67e674709e1e7db14f304a871481f310822d68c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/abf198e443e06696af3f356b44de67c0fa516107",
-                "reference": "abf198e443e06696af3f356b44de67c0fa516107",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/67e674709e1e7db14f304a871481f310822d68c5",
+                "reference": "67e674709e1e7db14f304a871481f310822d68c5",
                 "shasum": ""
             },
             "require": {
@@ -1647,7 +1647,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-11-01T14:05:55+00:00"
+            "time": "2022-11-08T14:47:39+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -7089,12 +7089,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WishKnish/KnishIO-Client-PHP.git",
-                "reference": "6e1c2646d626987f982f8f918c808525669bef17"
+                "reference": "fcefa1514597dea1b31ac6348145f709281c0cec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WishKnish/KnishIO-Client-PHP/zipball/6e1c2646d626987f982f8f918c808525669bef17",
-                "reference": "6e1c2646d626987f982f8f918c808525669bef17",
+                "url": "https://api.github.com/repos/WishKnish/KnishIO-Client-PHP/zipball/fcefa1514597dea1b31ac6348145f709281c0cec",
+                "reference": "fcefa1514597dea1b31ac6348145f709281c0cec",
                 "shasum": ""
             },
             "require": {
@@ -7160,7 +7160,7 @@
                 "source": "https://github.com/WishKnish/KnishIO",
                 "wiki": "https://github.com/WishKnish/KnishIO/wiki"
             },
-            "time": "2022-11-08T04:47:40+00:00"
+            "time": "2022-11-08T18:59:47+00:00"
         },
         {
             "name": "wishknish/knishio-server-php",
@@ -7168,12 +7168,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:WishKnish/KnishIO-Server-PHP.git",
-                "reference": "fadd73aad9968fceeb30ef54766541309d05140f"
+                "reference": "1a885540b296e21091fdc41b3660ea600c22f99f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WishKnish/KnishIO-Server-PHP/zipball/fadd73aad9968fceeb30ef54766541309d05140f",
-                "reference": "fadd73aad9968fceeb30ef54766541309d05140f",
+                "url": "https://api.github.com/repos/WishKnish/KnishIO-Server-PHP/zipball/1a885540b296e21091fdc41b3660ea600c22f99f",
+                "reference": "1a885540b296e21091fdc41b3660ea600c22f99f",
                 "shasum": ""
             },
             "require": {
@@ -7247,7 +7247,7 @@
                 "issues": "https://github.com/WishKnish/KnishIO-Server-PHP/issues",
                 "source": "https://github.com/WishKnish/KnishIO-Server-PHP"
             },
-            "time": "2022-11-08T04:47:09+00:00"
+            "time": "2022-11-08T18:59:19+00:00"
         }
     ],
     "packages-dev": [
