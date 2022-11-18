@@ -2383,25 +2383,25 @@
         },
         {
             "name": "nette/schema",
-            "version": "v1.2.2",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/schema.git",
-                "reference": "9a39cef03a5b34c7de64f551538cbba05c2be5df"
+                "reference": "abbdbb70e0245d5f3bf77874cea1dfb0c930d06f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/9a39cef03a5b34c7de64f551538cbba05c2be5df",
-                "reference": "9a39cef03a5b34c7de64f551538cbba05c2be5df",
+                "url": "https://api.github.com/repos/nette/schema/zipball/abbdbb70e0245d5f3bf77874cea1dfb0c930d06f",
+                "reference": "abbdbb70e0245d5f3bf77874cea1dfb0c930d06f",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^2.5.7 || ^3.1.5 ||  ^4.0",
-                "php": ">=7.1 <8.2"
+                "php": ">=7.1 <8.3"
             },
             "require-dev": {
                 "nette/tester": "^2.3 || ^2.4",
-                "phpstan/phpstan-nette": "^0.12",
+                "phpstan/phpstan-nette": "^1.0",
                 "tracy/tracy": "^2.7"
             },
             "type": "library",
@@ -2439,9 +2439,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.2.2"
+                "source": "https://github.com/nette/schema/tree/v1.2.3"
             },
-            "time": "2021-10-15T11:40:02+00:00"
+            "time": "2022-10-13T01:24:26+00:00"
         },
         {
             "name": "nette/utils",
@@ -3814,25 +3814,27 @@
         },
         {
             "name": "staudenmeir/eloquent-has-many-deep",
-            "version": "v1.16",
+            "version": "v1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/staudenmeir/eloquent-has-many-deep.git",
-                "reference": "14abcb86912d306862841edc8279d94117fed526"
+                "reference": "435ce579703ac387ecd97caf98502bd511d735f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/staudenmeir/eloquent-has-many-deep/zipball/14abcb86912d306862841edc8279d94117fed526",
-                "reference": "14abcb86912d306862841edc8279d94117fed526",
+                "url": "https://api.github.com/repos/staudenmeir/eloquent-has-many-deep/zipball/435ce579703ac387ecd97caf98502bd511d735f6",
+                "reference": "435ce579703ac387ecd97caf98502bd511d735f6",
                 "shasum": ""
             },
             "require": {
                 "illuminate/database": "^9.0",
-                "php": "^8.0.2"
+                "php": "^8.0.2",
+                "staudenmeir/eloquent-has-many-deep-contracts": "^1.0"
             },
             "require-dev": {
                 "awobaz/compoships": "^2.1",
                 "illuminate/pagination": "^9.0",
+                "nesbot/carbon": "^2.62.1",
                 "phpunit/phpunit": "^9.5",
                 "staudenmeir/eloquent-eager-limit": "^1.7"
             },
@@ -3855,7 +3857,7 @@
             "description": "Laravel Eloquent HasManyThrough relationships with unlimited levels",
             "support": {
                 "issues": "https://github.com/staudenmeir/eloquent-has-many-deep/issues",
-                "source": "https://github.com/staudenmeir/eloquent-has-many-deep/tree/v1.16"
+                "source": "https://github.com/staudenmeir/eloquent-has-many-deep/tree/v1.17"
             },
             "funding": [
                 {
@@ -3863,7 +3865,48 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-08-27T06:55:03+00:00"
+            "time": "2022-11-16T07:09:47+00:00"
+        },
+        {
+            "name": "staudenmeir/eloquent-has-many-deep-contracts",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts.git",
+                "reference": "f9589acaaf25f55f38c6dd9d6c1caa6ff62addf6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/eloquent-has-many-deep-contracts/zipball/f9589acaaf25f55f38c6dd9d6c1caa6ff62addf6",
+                "reference": "f9589acaaf25f55f38c6dd9d6c1caa6ff62addf6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0",
+                "php": "^8.0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\EloquentHasManyDeepContracts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Contracts for staudenmeir/eloquent-has-many-deep",
+            "support": {
+                "issues": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts/issues",
+                "source": "https://github.com/staudenmeir/eloquent-has-many-deep-contracts/tree/v1.0"
+            },
+            "time": "2022-09-12T18:34:56+00:00"
         },
         {
             "name": "symfony/console",
@@ -7168,12 +7211,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:WishKnish/KnishIO-Server-PHP.git",
-                "reference": "ec39b50cfd59cf6bb94bdc5c7ac10b4086b08803"
+                "reference": "20123ad2be1085829967a19284a81e7c07650558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WishKnish/KnishIO-Server-PHP/zipball/ec39b50cfd59cf6bb94bdc5c7ac10b4086b08803",
-                "reference": "ec39b50cfd59cf6bb94bdc5c7ac10b4086b08803",
+                "url": "https://api.github.com/repos/WishKnish/KnishIO-Server-PHP/zipball/20123ad2be1085829967a19284a81e7c07650558",
+                "reference": "20123ad2be1085829967a19284a81e7c07650558",
                 "shasum": ""
             },
             "require": {
@@ -7247,7 +7290,7 @@
                 "issues": "https://github.com/WishKnish/KnishIO-Server-PHP/issues",
                 "source": "https://github.com/WishKnish/KnishIO-Server-PHP"
             },
-            "time": "2022-11-15T17:49:49+00:00"
+            "time": "2022-11-18T14:43:59+00:00"
         }
     ],
     "packages-dev": [
@@ -7902,16 +7945,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.18",
+            "version": "9.2.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "12fddc491826940cf9b7e88ad9664cf51f0f6d0a"
+                "reference": "c77b56b63e3d2031bd8997fcec43c1925ae46559"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/12fddc491826940cf9b7e88ad9664cf51f0f6d0a",
-                "reference": "12fddc491826940cf9b7e88ad9664cf51f0f6d0a",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c77b56b63e3d2031bd8997fcec43c1925ae46559",
+                "reference": "c77b56b63e3d2031bd8997fcec43c1925ae46559",
                 "shasum": ""
             },
             "require": {
@@ -7967,7 +8010,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.18"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.19"
             },
             "funding": [
                 {
@@ -7975,7 +8018,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-10-27T13:35:33+00:00"
+            "time": "2022-11-18T07:47:47+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -8326,12 +8369,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "5317244268eb40e418f1cf8afa6d1d9df4e1f4a3"
+                "reference": "ed33734832e5a87eaa4341be7ce580de54157460"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/5317244268eb40e418f1cf8afa6d1d9df4e1f4a3",
-                "reference": "5317244268eb40e418f1cf8afa6d1d9df4e1f4a3",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/ed33734832e5a87eaa4341be7ce580de54157460",
+                "reference": "ed33734832e5a87eaa4341be7ce580de54157460",
                 "shasum": ""
             },
             "conflict": {
@@ -8388,7 +8431,7 @@
                 "codeigniter4/shield": "= 1.0.0-beta",
                 "codiad/codiad": "<=2.8.4",
                 "composer/composer": "<1.10.26|>=2-alpha.1,<2.2.12|>=2.3,<2.3.5",
-                "concrete5/concrete5": "<9",
+                "concrete5/concrete5": ">= 9.0.0RC1, < 9.1.3|<9",
                 "concrete5/core": "<8.5.8|>=9,<9.1",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
                 "contao/contao": ">=4,<4.4.56|>=4.5,<4.9.18|>=4.10,<4.11.7|>=4.13,<4.13.3",
@@ -8856,7 +8899,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-11T00:18:57+00:00"
+            "time": "2022-11-16T22:04:17+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -9886,16 +9929,16 @@
         },
         {
             "name": "spatie/flare-client-php",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/flare-client-php.git",
-                "reference": "b1b974348750925b717fa8c8b97a0db0d1aa40ca"
+                "reference": "ebb9ae0509b75e02f128b39537eb9a3ef5ce18e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/b1b974348750925b717fa8c8b97a0db0d1aa40ca",
-                "reference": "b1b974348750925b717fa8c8b97a0db0d1aa40ca",
+                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/ebb9ae0509b75e02f128b39537eb9a3ef5ce18e8",
+                "reference": "ebb9ae0509b75e02f128b39537eb9a3ef5ce18e8",
                 "shasum": ""
             },
             "require": {
@@ -9943,7 +9986,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/flare-client-php/issues",
-                "source": "https://github.com/spatie/flare-client-php/tree/1.3.0"
+                "source": "https://github.com/spatie/flare-client-php/tree/1.3.1"
             },
             "funding": [
                 {
@@ -9951,7 +9994,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-08T10:10:20+00:00"
+            "time": "2022-11-16T08:30:20+00:00"
         },
         {
             "name": "spatie/ignition",
